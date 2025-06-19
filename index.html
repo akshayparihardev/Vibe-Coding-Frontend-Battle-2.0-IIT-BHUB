@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name - Responsive Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#hero">
+                    <img src="images/logo.png" alt="Company Logo Light" class="logo-light">
+                    <img src="images/logo.png" alt="Company Logo Dark" class="logo-dark">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#visuals">Visuals</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#work">Work</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark and light mode">🌙</button>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="container hero-main-content">
+            <div class="hero-content">
+                <h1 class="stagger-text">Revolutionize your financial <span class="highlight">journey with us.</span></h1>
+                <p class="fade-in-up">Experience a new era of money management. Secure, intuitive, and designed for your success.</p>
+                <div class="hero-buttons fade-in-up">
+                    <a href="#features" class="btn btn-primary">Get Started Now</a>
+                    <a href="#contact" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+            </div>
+            <div class="hero-visuals">
+                <div class="visual-card-wrapper card-pos-1">
+                    <div class="visual-card">
+                        <h3>Monthly Expenses</h3>
+                        <p class="large-number">$1,240</p>
+                        <p class="small-text">Detailed Breakdown</p>
+                        <img src="images/Monthly Expenses.jpeg" alt="Cards Illustration" class="illustration-image">
+                    </div>
+                </div>
+                <div class="visual-card-wrapper card-pos-2">
+                    <div class="visual-card">
+                        <h3>Total Income</h3>
+                        <p class="large-number">$3,500</p>
+                        <p class="small-text">This Month</p>
+                        <img src="images/Unlock the Secrets of Wealth.jpeg" alt="Graph Illustration" class="illustration-image">
+                    </div>
+                </div>
+                <div class="visual-card-wrapper card-pos-3">
+                    <div class="visual-card">
+                        <h3>Cash on Hand</h3>
+                        <p class="large-number">$5,800</p>
+                        <p class="small-text">Available Funds</p>
+                        <img src="images/stats.png" alt="Stats Illustration" class="illustration-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visuals" class="visuals-section section-padding">
+        <div class="container">
+            <h2 class="section-title active-animation">Cutting-Edge Visualizations</h2>
+            <p class="section-subtitle active-animation">See your data come to life with interactive and insightful displays.</p>
+            <div class="visuals-grid">
+                <div class="visual-card active-animation">
+                    <h3>Brand Kits Integration</h3>
+                    <p>Manage your brand assets seamlessly.</p>
+                    <img src="images/cards.png" alt="Brand Kits" class="full-width-image">
+                </div>
+                <div class="visual-card active-animation">
+                    <h3>Embodied Carbon Emissions</h3>
+                    <p>Track environmental impact with detailed graphs.</p>
+                    <img src="images/graph.png" alt="Carbon Emissions Graph" class="full-width-image">
+                </div>
+                <div class="visual-card active-animation">
+                    <h3>Portfolio Performance</h3>
+                    <p>Key metrics at a glance for your managed assets.</p>
+                    <img src="images/stats.png" alt="Portfolio Stats" class="full-width-image">
+                </div>
+                <div class="visual-card active-animation video-trigger-card">
+                    <h3>Watch Our Story</h3>
+                    <p>Get a glimpse into our journey and vision.</p>
+                    <button class="btn btn-primary open-video-modal" aria-label="Play Reel Video">
+                        <i class="fas fa-play"></i> Play Reel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section section-padding">
+        <div class="container">
+            <h2 class="section-title active-animation">Unparalleled BSS/OSS Capabilities</h2>
+            <div class="tabs-container active-animation">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="billing">
+                        <i class="fas fa-dollar-sign"></i> Billing
+                    </button>
+                    <button class="tab-button" data-tab="charging">
+                        <i class="fas fa-charging-station"></i> Charging
+                    </button>
+                    <button class="tab-button" data-tab="catalog">
+                        <i class="fas fa-book"></i> Catalog
+                    </button>
+                    <button class="tab-button" data-tab="events">
+                        <i class="fas fa-calendar-alt"></i> Events
+                    </button>
+                </div>
+                <div class="tab-content-wrapper">
+                    <div id="billing" class="tab-content active active-animation">
+                        <h3>Real-Time Convergent Billing</h3>
+                        <p>Instantaneous, accurate billing across all services and payment methods.</p>
+                        <img src="images/Convergent-Real-Time-Billing-Systems.png" alt="Billing Solution Image" style="max-width:100%; height:auto; border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div id="charging" class="tab-content active-animation">
+                        <h3>Online Charging System</h3>
+                        <p>AI-powered insights that predict customer needs and drive personalized experiences.</p>
+                        <img src="images/Ai powered.jpg" alt="Charging System Image" style="max-width:100%; height:auto; border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div id="catalog" class="tab-content active-animation">
+                        <h3>Product Catalog</h3>
+                        <p>Intuitive tools that empower customers to manage their accounts with ease, freeing up your team.</p>
+                        <img src="images/catalog.jpg" alt="Product Catalog Image" style="max-width:100%; height:auto; border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div id="events" class="tab-content active-animation">
+                        <h3>Event Management</h3>
+                        <p>Streamline event creation, tracking, and reporting for seamless operations.</p>
+                        <img src="images/event managment.jpg" alt="Event Management Image" style="max-width:100%; height:auto; border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="customers" class="customer-section section-padding">
+        <div class="container">
+            <h2 class="section-title active-animation">Trusted by Leading Companies</h2>
+            <p class="section-subtitle active-animation">Our partners achieve success with our innovative solutions.</p>
+            <div class="customer-logos active-animation">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Brex" alt="Brex Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Runway" alt="Runway Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Supercell" alt="Supercell Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Retool" alt="Retool Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=OpenAI" alt="OpenAI Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=CashApp" alt="Cash App Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Quickbooks" alt="Quickbooks Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Xero" alt="Xero Logo">
+                <img src="https://placehold.co/100x50/333/FFFFFF/png?text=Sage" alt="Sage Logo">
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-secondary open-video-modal" aria-label="Meet our customers video">
+                    Meet our customers <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section section-padding">
+        <div class="container">
+            <h2 class="section-title active-animation">Happy Sellers</h2>
+            <div class="testimonials-carousel-container active-animation">
+                <div class="testimonials-carousel">
+                    <div class="testimonial-card">
+                        <p>"As a growing brand, being proactive and watching your margins closely. Our platform's order-based plans meant we weren't paying more just to access core tools. The platform has taken a lot off our plate."</p>
+                        <div class="testimonial-author">
+                            <img src="images/test 1.jpg" alt="Author 1">
+                            <div>
+                                <h4>Amzigo - UK Amazon Seller</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"I run a small online store on the side, and honestly, I don't have time to check performance every day. This platform shows me what's happening without needing to dig through reports. I really like how it sends out follow-up requests."</p>
+                        <div class="testimonial-author">
+                            <img src="images/test 2.jpg" alt="Author 2">
+                            <div>
+                                <h4>Sophie Wilson - USA Online Seller</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"My favorite tools are simple enough for a beginner but powerful once you grow. I didn't even know review requests could be automated until I found this platform. Now they just go out on their own, and I can spend more time learning how to improve my store."</p>
+                        <div class="testimonial-author">
+                            <img src="images/test 3.jpeg" alt="Author 3">
+                            <div>
+                                <h4>Emily James - USA Online Seller</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section section-padding">
+        <div class="container">
+            <h2 class="section-title active-animation">Simple & Transparent Pricing</h2>
+            <p class="section-subtitle active-animation">Based on your monthly order volume. Whether you're just starting out or a big brand, we have a plan that fits your growth and unlock the full power of our all-in-one platform.</p>
+            <div class="pricing-cards active-animation">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <p class="price">$15.99<span>/month</span></p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Up to 500 orders</li>
+                        <li><i class="fas fa-check-circle"></i> Basic Analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Email Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Choose Plan</a>
+                </div>
+                <div class="pricing-card popular">
+                    <p class="most-popular">Most Popular</p>
+                    <h3>Growth</h3>
+                    <p class="price">$29.99<span>/month</span></p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Up to 2,500 orders</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced Analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Choose Plan</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <p class="price">$59.99<span>/month</span></p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Up to 10,000 orders</li>
+                        <li><i class="fas fa-check-circle"></i> AI Insights</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-showcase-section section-padding">
+        <div class="container">
+            <h2 class="section-title active-animation">Featured Work</h2>
+            <p class="section-subtitle active-animation">Explore our recent projects and collaborations.</p>
+            <div class="showcase-content active-animation">
+                <div class="showcase-items">
+                    <div class="showcase-item active">
+                        <div class="showcase-text">
+                            <h3>SWITCH - SOPRA STERIA KICK OFF 2025</h3>
+                            <div class="tags">
+                                <span>NORWAY</span>
+                                <span>B2E EVENT</span>
+                            </div>
+                            <a href="#" class="read-more">READ MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="showcase-image">
+                            <img src="images/kickoff.jpeg" alt="Sopra Steria Kick Off">
+                        </div>
+                        <span class="showcase-number">01</span>
+                    </div>
+
+                    <div class="showcase-item">
+                        <div class="showcase-text">
+                            <h3>GRAND HOTEL OSLO 150 YEARS</h3>
+                            <div class="tags">
+                                <span>INTERNATIONAL</span>
+                                <span>NORWAY</span>
+                                <span>BRAND ACTIVATION</span>
+                            </div>
+                            <a href="#" class="read-more">READ MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="showcase-image">
+                            <img src="images/grand.jpg" alt="Grand Hotel Oslo">
+                        </div>
+                        <span class="showcase-number">02</span>
+                    </div>
+
+                    <div class="showcase-item">
+                        <div class="showcase-text">
+                            <h3>INFORMAL MEETING OF NATO MINISTERS OF FOREIGN AFFAIRS IN OSLO, NORWAY</h3>
+                            <div class="tags">
+                                <span>NORWAY</span>
+                                <span>B2B EVENT</span>
+                            </div>
+                            <a href="#" class="read-more">READ MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="showcase-image">
+                            <img src="images/oslo.jpg" alt="NATO Ministers Meeting">
+                        </div>
+                        <span class="showcase-number">03</span>
+                    </div>
+                </div>
+                <div class="showcase-navigation">
+                    <div class="showcase-nav-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <div class="view-all-cases">
+                        <a href="#" class="btn-text">VIEW ALL CASES <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <video id="modal-video" controls autoplay muted playsinline></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

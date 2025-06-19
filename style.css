@@ -1,0 +1,1656 @@
+/* Basic Resets & Typography */
+:root {
+    --primary-color: #7B68EE; /* MediumSlateBlue - a nice purple */
+    --secondary-color: #6A5ACD; /* SlateBlue */
+    --accent-color: #8A2BE2; /* BlueViolet */
+    --text-color-light: #333;
+    --text-color-dark: #eee;
+    --background-light: #f4f7f6;
+    --background-dark: #1a1a2e;
+    --card-background-light: #ffffff;
+    --card-background-dark: #2c2c4d;
+    --border-color-light: #ddd;
+    --border-color-dark: #444;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.4);
+    --highlight-text: var(--primary-color);
+    --highlight-bg-light: rgba(123, 104, 238, 0.1);
+    --highlight-bg-dark: rgba(138, 43, 226, 0.2);
+
+    /* Loader colors */
+    --loader-spinner-color: var(--primary-color);
+    --loader-bg-color: var(--background-light);
+
+    /* Transition defaults */
+    --transition-speed: 0.3s;
+    --transition-ease: ease-in-out;
+}
+
+/* Light Mode Defaults */
+body.light-mode {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode #loader-wrapper {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--background-dark);
+    box-shadow: 0 2px 10px var(--shadow-dark);
+}
+
+body.dark-mode .navbar a {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar a.active {
+    color: var(--accent-color);
+}
+
+/* Logo visibility for light and dark modes */
+.navbar .logo .logo-dark {
+    display: none; /* Hide dark logo by default */
+}
+
+body.dark-mode .navbar .logo .logo-light {
+    display: none; /* Hide light logo in dark mode */
+}
+
+body.dark-mode .navbar .logo .logo-dark {
+    display: block; /* Show dark logo in dark mode */
+}
+
+
+body.dark-mode .btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 2px solid var(--accent-color);
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .btn-secondary {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Dark mode styles for sections */
+body.dark-mode .hero-section {
+    background-color: var(--background-dark);
+}
+body.dark-mode .visuals-section {
+    background-color: var(--background-dark);
+}
+body.dark-mode .features-section {
+    background-color: var(--background-dark);
+}
+body.dark-mode .customer-section {
+    background-color: var(--background-dark);
+}
+body.dark-mode .testimonials-section {
+    background-color: var(--background-dark);
+}
+body.dark-mode .pricing-section {
+    background-color: var(--background-dark);
+}
+body.dark-mode .work-showcase-section {
+    background-color: var(--background-dark);
+}
+
+/* Specific dark mode styles for tabs-container and testimonials-carousel-container */
+body.dark-mode .features-section .tabs-container {
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+body.dark-mode .testimonials-carousel-container {
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+body.dark-mode .showcase-content { /* Added this for the showcase content */
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-content p {
+    color: var(--text-color-dark);
+}
+
+
+body.dark-mode .section-title,
+body.dark-mode .section-subtitle {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .visual-card,
+body.dark-mode .tab-content,
+body.dark-mode .testimonial-card,
+body.dark-mode .pricing-card,
+body.dark-mode .showcase-item {
+    background-color: var(--card-background-dark);
+    border-color: var(--border-color-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+body.dark-mode .visual-card h3,
+body.dark-mode .tab-content h3,
+body.dark-mode .testimonial-card p,
+body.dark-mode .testimonial-card h4,
+body.dark-mode .pricing-card h3,
+body.dark-mode .pricing-card p,
+body.dark-mode .showcase-item h3,
+body.dark-mode .showcase-item span,
+body.dark-mode .footer p {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .highlight {
+    color: var(--accent-color);
+}
+
+body.dark-mode .tab-button {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark-mode .tab-button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .pricing-card.popular {
+    border-color: var(--accent-color);
+}
+
+body.dark-mode .pricing-card ul li {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .pricing-card ul li i {
+    color: var(--primary-color);
+}
+
+body.dark-mode #theme-toggle {
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+    border: none;
+}
+
+body.dark-mode .showcase-number {
+    color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .showcase-nav-dots .dot {
+    background-color: var(--border-color-dark);
+}
+body.dark-mode .showcase-nav-dots .dot.active {
+    background-color: var(--primary-color);
+}
+body.dark-mode .read-more,
+body.dark-mode .btn-text {
+    color: var(--accent-color);
+}
+body.dark-mode .read-more i,
+body.dark-mode .btn-text i {
+    color: var(--accent-color);
+}
+body.dark-mode .footer {
+    background-color: #111122;
+    border-top: 1px solid var(--border-color-dark);
+}
+body.dark-mode .social-links a {
+    color: var(--text-color-dark);
+}
+body.dark-mode .social-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-flex; /* Changed from inline-block to inline-flex */
+    align-items: center; /* Vertically align items (text and icon) */
+    justify-content: center; /* Center content horizontally */
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
+    cursor: pointer;
+    font-size: 1em;
+    gap: 10px; /* Space between text and icon */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-text {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.btn-text:hover {
+    color: var(--accent-color);
+}
+
+.highlight {
+    color: var(--highlight-text);
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+
+/* Section Titles & Subtitles */
+.section-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--text-color-light);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+body.dark-mode .section-subtitle {
+    color: #bbb;
+}
+
+
+/* Loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--loader-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: hidden; /* Changed to hidden by default */
+    transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
+}
+
+#loader-wrapper.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid var(--loader-spinner-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: var(--card-background-light);
+    color: var(--text-color-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    transition: background-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .logo img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.navbar .logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar .nav-links li a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.navbar .nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) var(--transition-ease);
+}
+
+.navbar .nav-links li a:hover::after,
+.navbar .nav-links li a.active::after {
+    width: 100%;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+#theme-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+/* Main container within hero section for flex alignment */
+.hero-section .hero-main-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between content and visuals */
+    width: 100%; /* Ensure it takes full container width */
+    justify-content: space-between; /* Pushes content left, visuals right */
+}
+
+.hero-content {
+    flex: 1; /* Allow content to grow */
+    min-width: 300px; /* Minimum width for content */
+    max-width: 600px;
+    animation: fade-in-up 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.8em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+body.dark-mode .hero-content p {
+    color: #bbb;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-visuals {
+    flex: 1; /* Allow visuals to take remaining space */
+    min-width: 300px; /* Minimum width for visuals */
+    height: 450px; /* Fixed height to position cards within */
+    position: relative; /* Crucial for absolute positioning of child cards */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in-up 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-visuals .visual-card-wrapper {
+    position: absolute; /* Enable precise positioning */
+    width: 280px; /* Fixed width for card containers */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* Removed individual delays; animation managed by .active-animation on parent */
+}
+
+.hero-visuals .visual-card {
+    background-color: var(--card-background-light);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition-speed) var(--transition-ease);
+    width: 100%; /* Card fills its wrapper */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-visuals .visual-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-light);
+}
+
+body.dark-mode .hero-visuals .visual-card {
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+body.dark-mode .hero-visuals .visual-card:hover {
+    box-shadow: 0 8px 25px var(--shadow-dark);
+}
+
+.hero-visuals .visual-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero-visuals .visual-card .large-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--text-color-light);
+    margin-bottom: 5px;
+}
+
+body.dark-mode .hero-visuals .visual-card .large-number {
+    color: var(--text-color-dark);
+}
+
+.hero-visuals .visual-card .small-text {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .hero-visuals .visual-card .small-text {
+    color: #ccc;
+}
+
+.hero-visuals .visual-card .illustration-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Specific positioning for each card */
+.hero-visuals .card-pos-1 {
+    top: 50px;
+    left: 10%;
+    z-index: 3; /* Bring this card to the front */
+    transform: rotate(-5deg); /* Slight rotation */
+}
+
+.hero-visuals .card-pos-2 {
+    top: 0;
+    right: 5%;
+    z-index: 2;
+    transform: rotate(10deg); /* Slight rotation */
+}
+
+.hero-visuals .card-pos-3 {
+    bottom: 20px;
+    left: 30%;
+    z-index: 1;
+    transform: rotate(5deg); /* Slight rotation */
+}
+
+
+/* Visuals Section (for 'cards.png', 'graph.png', 'stats.png' if static) */
+.visuals-section .visuals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.visuals-section .visual-card {
+    background-color: var(--card-background-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition-speed) var(--transition-ease);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.visuals-section .visual-card.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+
+.visuals-section .visual-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.visuals-section .visual-card p {
+    /* Adjusted for better readability when full-width */
+    max-width: 600px; /* Limit text width */
+    margin-left: auto; /* Center the text */
+    margin-right: auto; /* Center the text */
+}
+
+.visuals-section .visual-card .full-width-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Specific styling for the play reel button if needed */
+.visual-card.video-trigger-card {
+    grid-column: 1 / -1; /* Make this div span all columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px; /* Added padding for better appearance when full width */
+}
+.visual-card.video-trigger-card h3 {
+    margin-bottom: 15px; /* Added more space below heading */
+}
+.visual-card.video-trigger-card p {
+    margin-bottom: 30px; /* Increased space before the button */
+}
+.visual-card.video-trigger-card .btn {
+    margin-top: 0; /* Resetting existing margin-top if any */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Features & Services Tabs */
+.features-section .tabs-container {
+    background-color: var(--card-background-light); /* Default light mode */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: background-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease), opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+
+.features-section .tabs-container.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode .features-section .tabs-container { /* Dark mode override */
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color-light);
+    padding-bottom: 15px;
+}
+
+body.dark-mode .tab-buttons {
+    border-bottom-color: var(--border-color-dark);
+}
+
+
+.tab-button {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
+}
+
+.tab-button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content-wrapper {
+    /* Set fixed dimensions for the wrapper */
+    width: 735px;
+    height: 490px;
+    margin: 0 auto; /* Center the wrapper */
+    position: relative; /* Needed for absolute positioning of inner content */
+    overflow: hidden; /* Hide anything outside the bounds */
+    border-radius: 12px; /* Apply border-radius to the wrapper */
+    box-shadow: 0 4px 15px var(--shadow-light); /* Apply shadow to the wrapper */
+}
+
+body.dark-mode .tab-content-wrapper {
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+
+.tab-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Position relative to wrapper */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-content img {
+    position: absolute; /* Absolute positioning to fill the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make image fill the entire tab-content div */
+    height: 100%; /* Make image fill the entire tab-content div */
+    object-fit: cover; /* Cover the div, cropping if necessary */
+    /* Removed individual border-radius and box-shadow as they are on the wrapper now */
+    z-index: 1; /* Place image below the text overlay */
+}
+
+.tab-text-overlay {
+    position: absolute; /* Position overlay on top of the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: #fff; /* White text for contrast */
+    z-index: 2; /* Place text overlay above the image */
+    padding: 40px; /* Increased padding for better spacing */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    border-radius: 12px; /* Match border-radius of the wrapper */
+}
+
+.tab-text-overlay h3 {
+    color: #fff; /* Ensure heading is white */
+    margin-bottom: 15px;
+    font-size: 2.2em; /* Ensure good size for heading */
+    line-height: 1.2;
+}
+
+.tab-text-overlay p {
+    max-width: 80%; /* Adjusted max-width for better text wrapping */
+    color: #eee; /* Slightly lighter white for paragraph */
+    margin-bottom: 0; /* Remove bottom margin if last element */
+    font-size: 1.1em; /* Ensure good size for paragraph */
+}
+
+
+/* Customers Section */
+.customer-section {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+    padding: 80px 0;
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.customer-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+
+.customer-logos.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.customer-logos img {
+    max-height: 50px;
+    max-width: 150px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+body.dark-mode .customer-logos img {
+    filter: grayscale(100%) brightness(200%);
+}
+
+body.dark-mode .customer-logos img:hover {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.customer-section .text-center {
+    margin-top: 30px; /* Adjusting the top margin for the button container */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--card-background-light); /* Default light mode */
+    padding: 80px 0;
+    text-align: center;
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+body.dark-mode .testimonials-section {
+    background-color: var(--background-dark); /* Ensure section background changes */
+}
+
+.testimonials-carousel-container {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1000px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: background-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease), opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+.testimonials-carousel-container.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode .testimonials-carousel-container { /* Dark mode override */
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+
+.testimonials-carousel {
+    display: flex;
+    transition: transform 0.5s var(--transition-ease);
+    will-change: transform;
+}
+
+.testimonial-card {
+    flex: 0 0 auto;
+    width: calc(100% / 1 - 30px);
+    margin: 0 15px;
+    background-color: var(--card-background-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    transition: background-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
+}
+
+body.dark-mode .testimonial-card {
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+.testimonial-card p {
+    font-size: 1.1em;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .testimonial-card p {
+    color: var(--text-color-dark);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.testimonial-author h4 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+.carousel-nav-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.carousel-nav-dots .dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--border-color-light);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .carousel-nav-dots .dot {
+    background-color: var(--border-color-dark);
+}
+
+.carousel-nav-dots .dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.3);
+}
+
+/* Pricing Section */
+.pricing-section {
+    background-color: var(--background-light);
+    padding: 80px 0;
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+
+.pricing-cards.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pricing-card {
+    background-color: var(--card-background-light);
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    text-align: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color var(--transition-speed) var(--transition-ease);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px var(--shadow-light);
+}
+
+body.dark-mode .pricing-card {
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+body.dark-mode .pricing-card:hover {
+    box-shadow: 0 8px 25px var(--shadow-dark);
+}
+
+
+.pricing-card.popular {
+    border-color: var(--accent-color);
+    transform: scale(1.03);
+}
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+.pricing-card .most-popular {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-bottom-left-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.pricing-card h3 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--text-color-light);
+    margin-bottom: 20px;
+}
+
+body.dark-mode .pricing-card .price {
+    color: var(--text-color-dark);
+}
+
+.pricing-card .price span {
+    font-size: 0.4em;
+    font-weight: 400;
+    color: #666;
+}
+
+body.dark-mode .pricing-card .price span {
+    color: #bbb;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    font-size: 1.1em;
+    padding: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.dark-mode .pricing-card ul li {
+    color: var(--text-color-dark);
+}
+
+.pricing-card ul li i {
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.pricing-card .btn {
+    width: 100%;
+}
+
+
+/* Work Showcase Section */
+.work-showcase-section {
+    background-color: var(--background-light);
+    padding: 80px 0;
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.work-showcase-section .section-title {
+    margin-bottom: 15px;
+}
+.work-showcase-section .section-subtitle {
+    margin-bottom: 60px;
+}
+
+.showcase-content {
+    background-color: var(--card-background-light); /* Default light mode */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    overflow: hidden;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: background-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease), opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+}
+.showcase-content.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode .showcase-content { /* Dark mode override for this specific div */
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+
+.showcase-items {
+    display: flex;
+    transition: transform 0.5s var(--transition-ease);
+    will-change: transform;
+}
+
+.showcase-item {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row; /* Default to row for larger screens */
+    align-items: flex-start;
+    gap: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+/* Make sure only active is shown by JS, others are hidden via JS as well */
+.showcase-item:not(.active) {
+    display: none;
+}
+
+
+.showcase-item .showcase-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.showcase-item h3 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.showcase-item .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .showcase-item .tags span {
+    background-color: var(--highlight-bg-dark);
+    color: var(--accent-color);
+}
+
+.showcase-item .read-more {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.showcase-item .read-more:hover {
+    color: var(--accent-color);
+}
+
+
+.showcase-item .showcase-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-item .showcase-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+body.dark-mode .showcase-item .showcase-image img {
+    box-shadow: 0 4px 15px var(--shadow-dark);
+}
+
+.showcase-number {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    font-size: 8em;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    line-height: 1;
+}
+
+body.dark-mode .showcase-number {
+    color: rgba(255, 255, 255, 0.05);
+}
+
+
+.showcase-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color-light);
+}
+
+body.dark-mode .showcase-navigation {
+    border-top-color: var(--border-color-dark);
+}
+
+.showcase-nav-dots {
+    display: flex;
+    gap: 10px;
+}
+
+body.dark-mode .showcase-nav-dots .dot {
+    background-color: var(--border-color-dark);
+}
+
+.showcase-nav-dots .dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.view-all-cases a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.view-all-cases a:hover {
+    color: var(--accent-color);
+}
+
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color-dark);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-top-color var(--transition-speed) var(--transition-ease);
+}
+
+.footer p {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #eee;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Animations & Utility Classes */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+.fade-in-up.delay-1 { animation-delay: 0.1s; }
+.fade-in-up.delay-2 { animation-delay: 0.2s; }
+
+
+/* For Intersection Observer animations */
+.active-animation {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+
+/* This class is added by JS when element is in view */
+.active-animation.animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.8s var(--transition-ease), transform 0.8s var(--transition-ease);
+}
+
+
+/* Stagger Text Animation (for hero title) */
+.stagger-text {
+    opacity: 0;
+    animation: fade-in-up 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+
+/* Video Modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10001;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.8em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .navbar .nav-links {
+        gap: 20px;
+    }
+    .navbar .nav-links li a {
+        font-size: 0.95em;
+    }
+    #theme-toggle {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Reset hero section for smaller screens */
+    .hero-section .hero-main-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px; /* Restore gap for vertical stacking */
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Reset hero visuals for smaller screens */
+    .hero-visuals {
+        position: relative; /* Keep relative, but now children will flow normally */
+        height: auto; /* Allow height to adjust */
+        display: grid; /* Use grid for a neat stack/wrap */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding-top: 30px;
+        width: 100%; /* Take full width */
+    }
+
+    .hero-visuals .visual-card-wrapper {
+        position: static; /* Remove absolute positioning */
+        width: auto; /* Allow width to be determined by grid */
+        transform: none; /* Remove rotations */
+    }
+
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+    .tab-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Adjust tab-content-wrapper for responsiveness */
+    .tab-content-wrapper {
+        width: 100%; /* Make it fluid on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        max-height: none; /* Remove max-height for full content display on small screens */
+    }
+
+    .tab-content {
+        position: relative; /* Keep relative to ensure children can be absolutely positioned inside */
+        height: auto; /* Allow height to adjust for content */
+        padding: 0; /* No padding on tab-content itself */
+    }
+
+    .tab-content img {
+        position: relative; /* Make image flow with content */
+        width: 100%; /* Fill available width */
+        height: 250px; /* Fixed height for image on smaller screens, adjust as needed */
+        object-fit: cover; /* Still cover to avoid black spaces */
+        border-radius: 12px 12px 0 0; /* Top corners rounded, bottom square */
+        margin-top: 0; /* Remove top margin */
+    }
+
+    .tab-text-overlay {
+        position: relative; /* Make overlay flow with content, no longer absolute */
+        background-color: var(--card-background-light); /* Background for the text part */
+        color: var(--text-color-light); /* Text color from theme */
+        padding: 20px; /* Add padding for text content */
+        z-index: auto; /* Reset z-index */
+        border-radius: 0 0 12px 12px; /* Rounded bottom corners */
+        box-shadow: none; /* Remove shadow if applied here */
+        /* Text alignment should follow .tab-content's center alignment */
+        justify-content: flex-start; /* Align text to start of flex container */
+    }
+    body.dark-mode .tab-text-overlay {
+        background-color: var(--card-background-dark);
+        color: var(--text-color-dark);
+    }
+    body.dark-mode .tab-text-overlay h3 {
+        color: var(--primary-color); /* Match theme primary color */
+    }
+    body.dark-mode .tab-text-overlay p {
+        color: var(--text-color-dark); /* Match theme text color */
+    }
+
+
+    .customer-logos {
+        gap: 20px;
+    }
+    .customer-logos img {
+        max-height: 40px;
+        max-width: 120px;
+    }
+
+    .testimonials-carousel-container {
+        max-width: 600px;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+    .pricing-card.popular {
+        transform: scale(1.0);
+    }
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+
+    /* Showcase section specific responsiveness */
+    .showcase-item {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        text-align: center;
+    }
+    .showcase-item .showcase-text {
+        padding-right: 0;
+    }
+    .showcase-item .tags {
+        justify-content: center;
+    }
+    .showcase-number {
+        font-size: 6em;
+        top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .container {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-visuals {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .visuals-section .visuals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+    .section-subtitle {
+        font-size: 1em;
+    }
+
+    .tab-button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .pricing-card {
+        padding: 30px 20px;
+    }
+    .pricing-card .price {
+        font-size: 3em;
+    }
+}
