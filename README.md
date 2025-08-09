@@ -58,8 +58,11 @@ Follow these steps to get the project up and running on your local machine.
 
 
 ### ❤️ App UI
+#### Light Theme ☀️
+<p align="center"> <img src="https://github.com/user-attachments/assets/5bb27f25-4e8e-4412-95d7-f9ae1b084be5" alt="Screenshot 1" width="900"> </p>
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/5bb27f25-4e8e-4412-95d7-f9ae1b084be5" alt="Screenshot 1" width="900"> </p> 
+
+#### Dark Theme 🌙
 <p align="center"> <img src="https://github.com/user-attachments/assets/98047c3e-0ece-477a-a53b-2f8e6a4c9750" alt="Screenshot 2" width="900"> </p> 
 
 <hr>
